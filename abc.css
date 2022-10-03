@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+
+header img {
+    height: 70px;
+    margin-left: 40px;
+}
+
+body{
+    height: 125vh;
+    background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+/* ul {
+  display: flex;  
+  align-items: center;
+  float: right;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+    float: right;
+    position: relative:
+} */
+
+header{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+/* 
+header img:first-child{
+    margin-left: auto;
+} */
+
+header *{
+    display: inline;
+}
+
+header li{
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+span {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 200px;
+    letter-spacing: 5px;
+    font-family: Outfit;
+}
