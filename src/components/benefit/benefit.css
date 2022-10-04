@@ -1,0 +1,37 @@
+*{
+    font-size: 20px;
+}
+
+
+.container{
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    color: white;
+}
+
+.description{
+    width: 500px;
+}
+
+.description > h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 108px;
+
+}
+
+.description > p {
+    text-align: center;
+    text-justify: inter-word;
+}
+
+.image > img{
+    height: 400px;
+    width: 400px;
+}
+
+.image{
+    margin-right: auto;
+}
+
