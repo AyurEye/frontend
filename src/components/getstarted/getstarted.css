@@ -33,3 +33,84 @@ button {
     width: 400px;
     border-radius: 40px;
 }
+
+.box-drop{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-drop > div > img {
+    width: 284px;
+    height: auto;
+}
+
+span {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 76px;
+    letter-spacing: 2px;
+}
+
+.dropfile_button{
+    width: 369px;
+}
+
+.logo{
+    width: 170px;
+    height: auto;
+}
+
+.logo-container {
+   
+    width: 137vh;
+    height: 41vh;
+    
+}
+
+.logos{
+    background-color: #043559;
+    opacity: 75%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.logos > img {
+    padding: 0 121px 0 0px
+}
+
+.logos > img:first-child{
+    padding-left: 89px;;
+}
+
+.contributor-container {
+    width: 137vh;
+    height: 41vh;
+}
+
+.contributers{
+    display: flex;
+    justify-content: center;
+}
+
+.cont-img > img{
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    
+}
+
+.cont-img {
+    padding: 2%;
+}
+
+.cont-box{
+    background-color: #043559;
+    opacity: 75%;
+    border-radius: 20px;
+}
+
+.container:last-child {
+    padding-top: inherit;
+}
