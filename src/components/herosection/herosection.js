@@ -1,6 +1,6 @@
 import React from 'react'
 import './herosection.css'
-import pic from '../../images/eye1.png'
+import pic from '../../images/eye4.png'
 
 
 export default function Herosection() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import './benefit.css'
-import pic from './box.png'
+import pic from '../../images/Shield.png'
 
 
 export default function Benefit() {
