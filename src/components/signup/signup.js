@@ -4,38 +4,38 @@ import { Link } from 'react-router-dom'
 
 const Signup = () => {
   return (
-    <div class="wrapper">
-        <div class="title-text">
-            <div class="title login">
+    <div className="wrapper">
+        <div className="title-text">
+            <div className="title login">
                 LoginForm
             </div>
-            <div class="title signup">
+            <div className="title signup">
                 SignUp Form
             </div>
         </div>
-        <div class="form-container">
+        <div className="form-container">
             <input type="radio" name="slide" id="login" />
-            <div class="slide-controls">
+            <div className="slide-controls">
               
-                <label for="login" class="slide login"><Link to="/login" style={{textDecoration: "none", color: "black"}}>Login</Link></label>
+                <label for="login" className="slide login"><Link to="/login" style={{textDecoration: "none", color: "black"}}>Login</Link></label>
               
                 <input type="radio" name="slide" id="signup"  checked />
-                <label for="signup" class="slide signup">Signup</label>
-                <div class="slider-tab"></div>
+                <label for="signup" className="slide signup">Signup</label>
+                <div className="slider-tab"></div>
             </div>
-            <div class="form-inner">
-                <form action="#" class="signup">
-                    <div class="field">
+            <div className="form-inner">
+                <form action="#" className="signup">
+                    <div className="field">
                        <input type="text" placeholder="Email Address" required />
                     </div>
-                    <div class="field">
+                    <div className="field">
                        <input type="password" placeholder="Password" required />
                     </div>
-                    <div class="field">
+                    <div className="field">
                        <input type="password" placeholder="Confirm password" required />
                     </div>
-                    <div class="field btn">
-                       <div class="btn-layer"></div>
+                    <div className="field btn">
+                       <div className="btn-layer"></div>
                        <input type="submit" value="Signup" />
                     </div>
                  </form>
