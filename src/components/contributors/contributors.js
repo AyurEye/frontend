@@ -26,22 +26,22 @@ export default function Contributors() {
             <div className="cont-img">
             <img src={profile} alt="profile" />
             <span>Avaya Bajracharya</span>
-            <span>Web Developer</span>
+            <span>Software Engineer</span>
             </div>
             <div className="cont-img">
             <img src={profile} alt="profile" />
             <span>Anish Manandhar</span>
-            <span>ML Expert</span>
+            <span>AI Researcher</span>
             </div>
             <div className="cont-img">
             <img src={profile} alt="profile" />
             <span>Anurag Timilsina</span>
-            <span>ML Expert</span>
+            <span>AI Researcher</span>
             </div>
             <div className="cont-img">
             <img src={profile} alt="profile" />
             <span>Ashish Thapa</span>
-            <span>Web Developer</span>
+            <span>Software Engineer</span>
             </div>
             
         </div>
@@ -49,7 +49,7 @@ export default function Contributors() {
             <div className="cont-img">
             <img src={profile} alt="profile" />
             <span>Ayush Paudel</span>
-            <span>Web Developer</span>
+            <span> Software Engineer</span>
             </div>
             
         </div>

@@ -1,10 +1,14 @@
 import React, {useRef, useState, useEffect, useContext} from 'react'
-import './login.css'
+// import './login.css'
+import '../signup/signup.css'
 import { Link } from "react-router-dom"
 import AuthContext from '../../context/AuthProvider'
+import glogo from '../../images/gLogo.png'
 
 import axios from '../../api/axios'
 const LOGIN_URL = '/auth'
+
+
 
 const Login = () => {
 
@@ -74,9 +78,10 @@ const Login = () => {
             <div className="title login">
                 LoginForm
             </div>
-            <div className="title signup">
-                SignUp Form
-            </div>
+        </div>
+        <div className="form-container glogo-box">
+            <img src={glogo} />
+            <span className="center glogo-text">Continue with Google</span>
         </div>
         <div className="form-container">
             <div className="slide-controls">

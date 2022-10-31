@@ -1,17 +1,19 @@
 import React from 'react'
 import './signup.css'
 import { Link } from 'react-router-dom'
+import glogo from '../../images/gLogo.png'
 
 const Signup = () => {
   return (
     <div className="wrapper">
         <div className="title-text">
-            <div className="title login">
-                LoginForm
-            </div>
             <div className="title signup">
                 SignUp Form
             </div>
+        </div>
+        <div className="form-container glogo-box">
+            <img src={glogo} />
+            <span className="center glogo-text">Continue with Google</span>
         </div>
         <div className="form-container">
             <input type="radio" name="slide" id="login" />
