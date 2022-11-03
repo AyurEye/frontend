@@ -28,24 +28,12 @@ button {
     opacity: 80%;
 }
 
-.box-drop{
+.drop-box{
     background-color: #D9D9D9;
-    height: 400px;
-    width: 400px;
     border-radius: 40px;
     cursor: pointer;
 }
 
-.box-drop{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.box-drop > div > img {
-    width: 284px;
-    height: auto;
-}
 
 span {
     font-size: 50px;

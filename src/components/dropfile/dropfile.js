@@ -13,7 +13,7 @@ export default function Dropfile() {
         })))
     }, []);
 
-  
+    
     const { getRootProps,
         getInputProps,
         isDragAccept,
@@ -39,9 +39,6 @@ const thumbs = files.map(file=>(
     useEffect(()=>()=>{
         files.forEach(file=> URL.revokeObjectURL(file.preview));  
     }, [files]);
-
-
-
 
 
     return (

@@ -12,7 +12,7 @@ import Signup from './components/signup/signup';
 import About from './components/about/about';
 import Contactus from './components/contactus/contactus';
 import Login from './components/login/login';
-
+import Profile from './components/profile/profile'
 
 function App() {
   return (
@@ -51,6 +51,11 @@ function App() {
         <Route path="/login">
           <Navbar/>
           <Login />
+          <Footer/>
+        </Route>
+        <Route path="/profile">
+          <Navbar/>
+            <Profile/>
           <Footer/>
         </Route>
         <Redirect to="/" />
