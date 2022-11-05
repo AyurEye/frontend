@@ -18,7 +18,13 @@ export default function Navbar() {
                     <li className="listitem"><Link to="/">Home</Link></li>
                     <li className="listitem"><Link to="/about">About</Link></li>
                     <li className="listitem"><Link to="/contactus">Contact Us</Link></li>
-                    <li className="listitem"><Link to="/signup">SignUp</Link></li>
+                    {/* <li className="listitem"><Link to="/signup">Signup</Link></li> */}
+                    <li className="listitem dropdown">Login
+                      <div className="dropdown-content">
+                        <Link to="/login/doctor">As Doctor</Link>
+                        <Link to="/login/patient">As Patient</Link>
+                      </div>
+                    </li>
                 </ul>
             </nav>
         </header>

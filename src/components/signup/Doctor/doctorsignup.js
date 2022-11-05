@@ -1,14 +1,14 @@
 import React from 'react'
 import './signup.css'
 import { Link } from 'react-router-dom'
-import glogo from '../../images/gLogo.png'
+import glogo from '../../../images/gLogo.png'
 
-const Signup = () => {
+const DoctorSignup = () => {
   return (
     <div className="wrapper">
         <div className="title-text">
             <div className="title signup">
-                SignUp Form
+                Doctor SignUp 
             </div>
         </div>
         <div className="form-container glogo-box">
@@ -19,7 +19,7 @@ const Signup = () => {
             <input type="radio" name="slide" id="login" />
             <div className="slide-controls">
               
-                <label for="login" className="slide login"><Link to="/login" style={{textDecoration: "none", color: "black"}}>Login</Link></label>
+                <label for="login" className="slide login"><Link to="/login/doctor" style={{textDecoration: "none", color: "black"}}>Login</Link></label>
               
                 <input type="radio" name="slide" id="signup"  checked />
                 <label for="signup" className="slide signup">Signup</label>
@@ -47,4 +47,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default DoctorSignup

@@ -1,13 +1,13 @@
 import React , { useCallback, useMemo, useEffect, useState } from 'react'
-import './profile.css'
+import './doctorprofile.css'
 import { Link } from 'react-router-dom'
-import glogo from '../../images/gLogo.png'
+import glogo from '../../../images/gLogo.png'
 import { useDropzone } from 'react-dropzone'
-import pic from '../../images/upload.png'
+import pic from '../../../images/upload.png'
 
 
 
-const Profile = () => {
+const DoctorProfile = () => {
     const [files, setFiles] = useState([]);
 
     const onDrop = useCallback(acceptedFiles =>{
@@ -99,4 +99,4 @@ const thumbs = files.map(file=>(
   )
 }
 
-export default Profile
+export default DoctorProfile

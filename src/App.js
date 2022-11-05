@@ -8,11 +8,15 @@ import Getstarted from './components/getstarted/getstarted';
 import Dropfile from './components/dropfile/dropfile';
 import Contributors from './components/contributors/contributors';
 import Footer from './components/footer/footer';
-import Signup from './components/signup/signup';
+import DoctorSignup from './components/signup/Doctor/doctorsignup';
+import PatientSignup from './components/signup/Patient/patientsignup';
 import About from './components/about/about';
 import Contactus from './components/contactus/contactus';
-import Login from './components/login/login';
-import Profile from './components/profile/profile'
+import DoctorLogin from './components/login/Doctor/Doctorlogin';
+import PatientLogin from './components/login/Patient/Patientlogin';
+import DoctorProfile from './components/profile/Doctor/doctorprofile';
+import PatientProfile from './components/profile/Patient/patientprofile';
+
 
 function App() {
   return (
@@ -27,12 +31,6 @@ function App() {
           <Contributors/>
           <Footer />
         </Route>
-        <Route path="/signup">
-          {/* SignUp Page */}
-          <Navbar />
-          <Signup />
-          <Footer />
-        </Route>
         <Route path="/about">
           <Navbar />
           <About />
@@ -43,19 +41,34 @@ function App() {
           <Contactus/>
           <Footer />
         </Route>
-        <Route path="/signup">
+        <Route path="/signup/doctor">
           <Navbar/>
-          <Signup/>
+          <DoctorSignup/>
           <Footer/>
         </Route>
-        <Route path="/login">
+        <Route path="/signup/patient">
           <Navbar/>
-          <Login />
+          <PatientSignup/>
           <Footer/>
         </Route>
-        <Route path="/profile">
+        <Route path="/login/doctor">
           <Navbar/>
-            <Profile/>
+          <DoctorLogin/>
+          <Footer/>
+        </Route>
+        <Route path="/login/patient">
+          <Navbar/>
+          <PatientLogin/>
+          <Footer/>
+        </Route>
+        <Route path="/profile/doctor">
+          <Navbar/>
+            <DoctorProfile/>
+          <Footer/>
+        </Route>
+        <Route path="/profile/patient">
+          <Navbar/>
+            <PatientProfile/>
           <Footer/>
         </Route>
         <Redirect to="/" />
