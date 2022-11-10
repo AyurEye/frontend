@@ -1,6 +1,15 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../../context/AuthProvider'
+import './homepage.css'
+import Dropfile from '../dropfile/dropfile'
+
+// importing images
+import eye from '../../image/eye4.png'
+import shield from '../../image/Shield.png'
+import dhLogo from '../../image/DH_logo_bg.png'
+import kuLogo from '../../image/KU logo.png'
+import defaultProfile from '../../image/profile.jpg'
 
 function Homepage() {
   const auth = useContext(AuthContext);
@@ -11,7 +20,7 @@ function Homepage() {
 
   return (
     <div>
-      HomePage: { auth.auth ? 
+      { auth.auth ? 
       <div>
         <button onClick={signout}> Sign Out</button> 
         Welcome: {auth.auth["email"]}
@@ -20,13 +29,87 @@ function Homepage() {
       : 
       
       <></> }<br />
-      <ul>
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
-          <li><Link to="/signup">Signup</Link></li>
-          <li><Link to="/dashboard">Dashboard</Link></li>
+      <>
+      {/* <!-- HeroSection --> */}
+        <div className="container">
+            <div className="description">
+            <h1 className="heading">AYUREYE</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nulla repudiandae voluptatibus quae magni tempora exercitationem numquam maiores nostrum quibusdam.</p>
+            </div>
+            <div className="eyeImage">
+            <img src={eye} alt="box" />
+            </div>
+        </div>
+        <div className="container">
+            <div className="shieldImage">
+            <img src={shield} alt="box" />
+            </div>
+            <div className="description">
+            <h1 className="heading">BENEFIT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nulla repudiandae voluptatibus quae magni tempora exercitationem numquam maiores nostrum quibusdam.</p>
+            </div>
+        </div>
 
-      </ul>
+
+        {/* <!-- Get Started Button --> */}
+        <div className='container'>
+            <div className="startedBox">
+                <button className='getstartedbutton'>GET STARTED</button>
+            </div>
+        </div>
+
+        {/* Dropzone for TB file upload */}
+        <Dropfile/>
+
+        {/* <!-- Our Partners --> */}
+        <div class="container">
+        <div class="logo-container">
+            <h2>Our Partners</h2>
+            <div class='logos'>
+            <img src={dhLogo} alt="Dhulikhel Logo" class='logo'/>
+            <img src={kuLogo} alt="KU Logo" class='logo'/>
+            </div>
+        </div>
+        </div>
+
+        {/* <!-- Our Contributors --> */}
+        <div class="container">
+        <div class="contributor-container">
+            <h2>Contributers</h2>
+            <div class="cont-box">
+                <div class="contributers">
+                    <div class="cont-img">
+                    <img src={defaultProfile} alt="profile" />
+                    <span>Avaya Bajracharya</span>
+                    <span>Software Engineer</span>
+                    </div>
+                    <div class="cont-img">
+                    <img src={defaultProfile} alt="profile" />
+                    <span>Anish Manandhar</span>
+                    <span>AI Researcher</span>
+                    </div>
+                    <div class="cont-img">
+                    <img src={defaultProfile} alt="profile" />
+                    <span>Anurag Timilsina</span>
+                    <span>AI Researcher</span>
+                    </div>
+                    <div class="cont-img">
+                    <img src={defaultProfile} alt="profile" />
+                    <span>Ashish Thapa</span>
+                    <span>Software Engineer</span>
+                    </div>
+                </div>
+                <div class="contributers">
+                    <div class="cont-img">
+                        <img src={defaultProfile} alt="profile" />
+                        <span>Ayush Paudel</span>
+                        <span> Software Engineer</span>
+                    </div>   
+                </div>
+            </div>
+            </div>
+        </div>
+        </>
     </div>
   )
 }
