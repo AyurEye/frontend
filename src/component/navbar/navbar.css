@@ -9,7 +9,7 @@ body{
   }
   
   body{
-    height: 125vh;
+    /* height: 125vh; */
     /* background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg'); */
     background-color: #030834;
     background-size: cover;
@@ -96,3 +96,16 @@ body{
     display: block;
   }
   
+  .signout-button{
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    /* background-color: cadetblue; */
+    background-color: #7dcfb6;
+    border: none;
+    cursor: pointer;
+  }
+
+  .signout-button:hover{
+    background-color: #fbd1a2;
+  }

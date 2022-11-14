@@ -8,6 +8,10 @@ import AuthContext from '../../context/AuthProvider'
 function Navbar() {
   const auth = useContext(AuthContext);
 
+  const signout = () =>{
+    auth.setAuth(null)
+  }
+
   return (
     <header>
         <img src={logo} alt="logo" />
@@ -21,8 +25,8 @@ function Navbar() {
                 {/* <li className="listitem"><Link to="#">Signup</Link></li> */} 
                 {auth.auth? 
                 <>
-                <li className="listitem"><Link to="#">DashBoard</Link></li>
-                <li className="listitem"><Link to="#">SignOut</Link></li>
+                <li className="listitem"><Link to="/dashboard">DashBoard</Link></li>
+                <li><button className="signout-button" onClick={signout}>SignOut</button></li>
                 
                 </> 
                 : 
