@@ -11,7 +11,7 @@ import DropUploadLicense from '../dropfile/dropUploadLicense'
 const REGISTER_URL = 'api/register'
 const AUTH_URL = '/auth'
 
-function Signup() {
+function PatientSignup() {
   const auth = useContext(AuthContext)
   
   // Creating UseState
@@ -98,7 +98,7 @@ function Signup() {
         <div className="wrapper">
         <div className="title-text">
             <div className="title signup">
-                <h3>SignUp Page</h3>
+                <h3>Patient SignUp</h3>
             </div>
         </div>
         <div className="form-container glogo-box">
@@ -163,14 +163,15 @@ function Signup() {
                           onChange={(e)=>{setContact(e.target.value)}}
                           required />
                     </div>
-                    <div className="field">
+                    {/* License field */}
+                    {/* <div className="field">
                        <input 
                           type="number" 
                           placeholder="License Number" 
                           value={licenseNumber}
                           onChange={(e)=>{setLicenseNumber(e.target.value)}}
                           required />
-                    </div>
+                    </div> */}
                     <div className="field">
                        <input 
                           type="password" 
@@ -189,7 +190,7 @@ function Signup() {
                     </div>
                     
                     {/* Dynamic Upload License */}
-                    <DropUploadLicense/>
+                    {/* <DropUploadLicense/> */}
 
                      {/* Static Upload License */}
                     {/* <div className="license-dropfile">
@@ -212,4 +213,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default PatientSignup

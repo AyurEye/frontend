@@ -11,7 +11,7 @@ import DropUploadLicense from '../dropfile/dropUploadLicense'
 const REGISTER_URL = 'api/register'
 const AUTH_URL = '/auth'
 
-function Signup() {
+function DoctorSignup() {
   const auth = useContext(AuthContext)
   
   // Creating UseState
@@ -98,7 +98,7 @@ function Signup() {
         <div className="wrapper">
         <div className="title-text">
             <div className="title signup">
-                <h3>SignUp Page</h3>
+                <h3>Doctor SignUp</h3>
             </div>
         </div>
         <div className="form-container glogo-box">
@@ -212,4 +212,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default DoctorSignup

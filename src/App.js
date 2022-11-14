@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 //importing the components
 import Login from './component/login/login';
-import Signup from './component/signup/signup';
+import DoctorSignup from './component/signup/doctorSignup';
+import PatientSignup from './component/signup/patientSignup';
 import Homepage from './component/homepage/homepage';
 import Dashboard from './component/dashboard/dashboard';
 import Profile from './component/profile/profile';
@@ -28,8 +29,11 @@ function App() {
           <Route path="/login" >
             <Login/> 
           </Route> 
-          <Route path="/signup">
-            <Signup/>
+          <Route path="/signup/doctor">
+            <DoctorSignup/>
+          </Route>
+          <Route path="/signup/patient">
+            <PatientSignup/>
           </Route>
           <Route path="/dashboard">
             <Dashboard/>
