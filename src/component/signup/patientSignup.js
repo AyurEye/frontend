@@ -98,7 +98,7 @@ function PatientSignup() {
         <div className="wrapper">
         <div className="title-text">
             <div className="title signup">
-                <h3>Patient SignUp</h3>
+                <h3>Doctor SignUp</h3>
             </div>
         </div>
         <div className="form-container glogo-box">
@@ -163,15 +163,14 @@ function PatientSignup() {
                           onChange={(e)=>{setContact(e.target.value)}}
                           required />
                     </div>
-                    {/* License field */}
-                    {/* <div className="field">
+                    <div className="field">
                        <input 
                           type="number" 
                           placeholder="License Number" 
                           value={licenseNumber}
                           onChange={(e)=>{setLicenseNumber(e.target.value)}}
                           required />
-                    </div> */}
+                    </div>
                     <div className="field">
                        <input 
                           type="password" 
@@ -190,7 +189,7 @@ function PatientSignup() {
                     </div>
                     
                     {/* Dynamic Upload License */}
-                    {/* <DropUploadLicense/> */}
+                    <DropUploadLicense/>
 
                      {/* Static Upload License */}
                     {/* <div className="license-dropfile">
@@ -207,6 +206,7 @@ function PatientSignup() {
                 </form>
               </div>
           </div>
+              <span className='small-text center no-padding'>Already have account? <Link to="/login/doctor">Login Here</Link></span>
     </div>
     }
     </>

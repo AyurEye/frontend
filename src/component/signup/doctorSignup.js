@@ -206,6 +206,7 @@ function DoctorSignup() {
                 </form>
               </div>
           </div>
+              <span className='small-text center no-padding'>Already have account? <Link to="/login/doctor">Login Here</Link></span>
     </div>
     }
     </>

@@ -2,7 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 //importing the components
-import Login from './component/login/login';
+import DoctorLogin from './component/login/doctorLogin';
+import PatientLogin from './component/login/patientLogin';
 import DoctorSignup from './component/signup/doctorSignup';
 import PatientSignup from './component/signup/patientSignup';
 import Homepage from './component/homepage/homepage';
@@ -26,9 +27,12 @@ function App() {
           <Route path="/profile">
             <Profile/>
           </Route>
-          <Route path="/login" >
-            <Login/> 
-          </Route> 
+          <Route path="/login/doctor" >
+            <DoctorLogin/> 
+          </Route>
+          <Route path="/login/patient" >
+            <PatientLogin/>
+          </Route>
           <Route path="/signup/doctor">
             <DoctorSignup/>
           </Route>
