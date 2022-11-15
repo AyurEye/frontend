@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/AuthProvider'
 import './dashboard.css'
+import report from '../../image/report2.png'
 
 function Dashboard() {
   const auth = useContext(AuthContext);
@@ -42,7 +43,7 @@ function Dashboard() {
          {/* <!-- Main --> */}
       <main className="main-container">
         <div className="main-title">
-          <p className="font-weight-bold">DASHBOARD</p>
+          {/* <p className="font-weight-bold">DASHBOARD</p> */}
         </div>
 
         <div className="main-cards">
@@ -50,7 +51,7 @@ function Dashboard() {
           <div className="card">
             <div className="card-inner">
               <p className="text-primary">Report 1</p>
-              <img src="image/report2.png" className="image"/>
+              <img src={report} className="image"/>
             </div>
             <div className="margin-top">
                 <span className="font-weight-bold">Detection: Tuberculosis</span><br/>
@@ -58,7 +59,60 @@ function Dashboard() {
                 <span className="text-primary font-weight-bold">Patient: Anurag Timilsina</span><br/>
             </div>
           </div>
+        
+          <div className="card">
+            <div className="card-inner">
+              <p className="text-primary">Report 1</p>
+              <img src={report} className="image"/>
+            </div>
+            <div className="margin-top">
+                <span className="font-weight-bold">Detection: Tuberculosis</span><br/>
+                <span className="text-primary font-weight-bold">Detected: 50%</span><br/>
+                <span className="text-primary font-weight-bold">Patient: Anurag Timilsina</span><br/>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-inner">
+              <p className="text-primary">Report 1</p>
+              <img src={report} className="image"/>
+            </div>
+            <div className="margin-top">
+                <span className="font-weight-bold">Detection: Tuberculosis</span><br/>
+                <span className="text-primary font-weight-bold">Detected: 50%</span><br/>
+                <span className="text-primary font-weight-bold">Patient: Anurag Timilsina</span><br/>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-inner">
+              <p className="text-primary">Report 1</p>
+              <img src={report} className="image"/>
+            </div>
+            <div className="margin-top">
+                <span className="font-weight-bold">Detection: Tuberculosis</span><br/>
+                <span className="text-primary font-weight-bold">Detected: 50%</span><br/>
+                <span className="text-primary font-weight-bold">Patient: Anurag Timilsina</span><br/>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-inner">
+              <p className="text-primary">Report 1</p>
+              <img src={report} className="image"/>
+            </div>
+            <div className="margin-top">
+                <span className="font-weight-bold">Detection: Tuberculosis</span><br/>
+                <span className="text-primary font-weight-bold">Detected: 50%</span><br/>
+                <span className="text-primary font-weight-bold">Patient: Anurag Timilsina</span><br/>
+            </div>
+          </div>
+        
+        
+        
         </div>
+
+        
         
 
       </main>
