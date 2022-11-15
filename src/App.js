@@ -16,7 +16,6 @@ import PatientProfileDashboard from './component/dashboard/patientProfileDashboa
 //importing auth
 
 
-
 function App() {
   const auth = useContext(AuthContext);
 
