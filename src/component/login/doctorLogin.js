@@ -78,7 +78,7 @@ function DoctorLogin() {
            {/* <p ref={errRef} class={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>  */}
         <div class="title-text">
             <div class="title login">
-                LoginForm
+                Doctor Login
             </div>
         </div>
         <div class="form-container glogo-box">

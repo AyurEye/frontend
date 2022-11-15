@@ -12,7 +12,7 @@ import Profile from './component/profile/profile';
 import { useContext } from 'react';
 import AuthContext from './context/AuthProvider';
 import Navbar from './component/navbar/navbar';
-
+import PatientProfileDashboard from './component/dashboard/patientProfileDashboard';
 //importing auth
 
 
@@ -38,6 +38,10 @@ function App() {
           </Route>
           <Route path="/signup/patient">
             <PatientSignup/>
+          </Route>
+          <Route path="/dashboard/patientProfile">
+            <PatientProfileDashboard/>
+            {/* <Homepage/> */}
           </Route>
           <Route path="/dashboard">
             <Dashboard/>

@@ -324,3 +324,14 @@ body {
   .margin-top {
     margin-top: 16px;
   }
+
+
+/* Patient Profile Dashboard */
+.add-button{
+    background-color: #fbd1a2;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
