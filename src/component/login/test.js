@@ -51,7 +51,7 @@ function Login() {
   return (
     <>
       {
-        auth.auth?
+        auth.auth ?
         <div> 
           <div>Yes you are logged in</div>
           <button onClick={signout}> Sign Out</button><br />

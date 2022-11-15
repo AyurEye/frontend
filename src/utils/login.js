@@ -14,7 +14,6 @@ export const signin = async (userEmail, userPassword, auth, setCookie) => {
         }
         );
         let data = await response.data;
-        console.log(data);
         // first set the cookie
         setCookie('JWT-Refresh', data.refresh, {
             path: '/'
@@ -23,10 +22,24 @@ export const signin = async (userEmail, userPassword, auth, setCookie) => {
         setCookie('JWT-Access', data.access, {
             path: '/'
         });
+
+        setCookie('User-type', data.user_type, {
+            path: '/'
+        });
+
+        setCookie('User', data.user, {
+            path: '/'
+        });
+
+        setCookie('User-id', data.id, {
+            path: '/'
+        });
+
         auth.setAuth({ 'access': data.access, 'refresh': data.refresh });
-        console.log(auth);
+        return data;
     } catch (err) {
         console.log(err);
     }
+    return null;
 
 }

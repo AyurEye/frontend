@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Signup from '../signup/signup'
 import { useContext } from 'react'
 import AuthContext from '../../context/AuthProvider'
 import gLogo from '../../image/gLogo.png'
@@ -9,8 +8,10 @@ import { signin } from '../../utils/login'
 import { useCookies } from 'react-cookie'
 import { cookieArray } from '../../utils/cookies'
 import { logout } from '../../utils/logout'
+import { useHistory } from 'react-router-dom';
 
 function PatientLogin() {
+  const navigate = useHistory();
   const auth = useContext(AuthContext);
   const [, setCookie, removeCookie] = useCookies(cookieArray);
 
@@ -33,10 +34,14 @@ function PatientLogin() {
   }, [auth]);
 
   //Login and logout function
-  const login = () => {
-    signin(userEmail, userPassword, auth, setCookie);
-    setIsLoggedIn(true);
+  const login = async () => {
+    let data = await signin(userEmail, userPassword, auth, setCookie);
 
+    setIsLoggedIn(data !== null);
+    if (data == null) {
+      setErrMsg("username or password incorrect");
+    }
+    navigate.push('/dashboard');
   }
 
 
@@ -90,7 +95,7 @@ function PatientLogin() {
               </div>
             </div>
             <div class="form-container glogo-box">
-              <img src={gLogo} />
+              <img src={gLogo} alt="logo" />
               <span class="center glogo-text">Continue with Google</span>
             </div>
             <div class="form-container">

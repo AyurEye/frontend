@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Signup from '../signup/signup'
 import { useContext } from 'react'
 import AuthContext from '../../context/AuthProvider'
 import gLogo from '../../image/gLogo.png'
@@ -9,9 +8,11 @@ import { signin } from '../../utils/login';
 import { useCookies } from 'react-cookie';
 import { logout } from '../../utils/logout'
 import { cookieArray } from '../../utils/cookies'
+import { useHistory } from 'react-router-dom';
 
 
 function DoctorLogin() {
+  const navigate = useHistory();
   const [, setCookie, removeCookie] = useCookies(cookieArray);
   const auth = useContext(AuthContext);
 
@@ -32,8 +33,17 @@ function DoctorLogin() {
   const [errMsg, setErrMsg] = useState('');
 
   const login = async () => {
-    await signin(userEmail, userPassword, auth, setCookie);
-    setLoggedIn(true);
+    const data = await signin(userEmail, userPassword, auth, setCookie);
+    console.log(data);
+    setLoggedIn(data !== null);
+    if (data == null) {
+      setErrMsg("username or password incorrect");
+    } else if (data['user_type'] !== 'Dr') {
+      logout(auth, removeCookie);
+      setLoggedIn(false);
+      setErrMsg("You are not authorized to login as a doctor");
+    }
+    navigate.push('/dashboard');
   }
 
   // Logout function
@@ -63,10 +73,10 @@ function DoctorLogin() {
           </div>
           :
           <div class="wrapper">
-            {/* <p ref={errRef} class={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>  */}
+            <p class={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
             <div class="title-text">
               <div class="title login">
-                LoginForm
+                DoctorLogin
               </div>
             </div>
             <div class="form-container glogo-box">

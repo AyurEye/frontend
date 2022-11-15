@@ -40,7 +40,7 @@
 .box-drop {
   background-color: #d9d9d9;
   height: 400px;
-  width: 400px;
+  width: 900px;
   border-radius: 40px;
 }
 
@@ -100,4 +100,14 @@
 .license-dropfile > img {
   width: 100px;
   height: auto;
+}
+
+.box-items {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.box-items > * {
+  margin: 10px;
 }
