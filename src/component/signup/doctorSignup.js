@@ -73,28 +73,7 @@ function DoctorSignup() {
                   You have Created account. Please wait for admin to approve you
                   <Link to="/homepage"> Return homepage </Link><br />
                </div>
-
                :
-
-               // <div>
-               //   Signup
-               // <form onSubmit={handleSubmit}>
-
-               //   First Name: <input type="text" onChange={(e)=>{setFirstName(e.target.value)}}/> <br />
-               //   Last Name: <input type="text" onChange={(e)=>{setLastName(e.target.value)}}/> <br />
-               //   Email: <input type="text" onChange={(e)=>{setUserEmail(e.target.value)}}/> <br />
-               //   Username: <input type="text" onChange={(e)=>{setUserName(e.target.value)}}/> <br />
-               //   {/* Address: <input type="text" onChange={(e)=>{setAddress(e.target.value)}}/> <br /> */}
-
-
-               //   Password: <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/> <br />
-               //   Password(Confirm): <input type="password" onChange={(e)=>{setMatchPassword(e.target.value)}}/> <br />
-               //   <button type="submit">Submit</button>
-               // </form>
-               // </div>
-
-
-
                <div className="wrapper">
                   <div className="title-text">
                      <div className="title signup">
@@ -106,7 +85,6 @@ function DoctorSignup() {
                      <span className="center glogo-text">Continue with Google</span>
                   </div>
                   <div className="form-container">
-
                      <div className="form-inner">
                         <form onSubmit={handleSubmit} className="signup">
                            <div className="field">
@@ -189,8 +167,7 @@ function DoctorSignup() {
                            </div>
 
                            {/* Dynamic Upload License */}
-                           <DropUploadLicense />
-
+                           {/* <DropUploadLicense /> */}
                            {/* Static Upload License */}
                            {/* <div className="license-dropfile">
                         <img src={uploadPic} />
@@ -209,6 +186,7 @@ function DoctorSignup() {
                   <span className='small-text center no-padding'>Already have account? <Link to="/login/doctor">Login Here</Link></span>
                </div>
          }
+
       </>
    )
 }
