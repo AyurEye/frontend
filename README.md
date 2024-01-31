@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Advancing Tuberculosis Detection in Chest X-ray
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our project presents a Computer-Aided Diagnosis (CAD) system leveraging advanced deep learning and computer vision techniques to enhance diagnostic accuracy and reduce transmission risks associated with tuberculosis (TB). Employing the YOLOv7 (You Only Look Once, version 7) object detection architecture, our system accurately identifies regions of interest in chest X-rays indicative of TB. By utilizing Convolutional Neural Networks (CNNs) and YOLO models, we detect consolidation and cavitary patterns of TB lesions, respectively.
 
-## Available Scripts
+We conducted experiments on the TBX11K dataset, a publicly available dataset, where we addressed data imbalance through class weights and data augmentation techniques. This approach yielded promising results, with a mean average precision (mAP) of 0.587, demonstrating robust performance in detecting both obsolete pulmonary TB and active TB. 
 
-In the project directory, you can run:
+Our CAD system not only advances diagnostic accuracy but also contributes to mitigating TB transmission risks. The ability to handle class imbalance underscores its potential for real-world TB detection applications.
 
-### `npm start`
+Find Research Paper at https://www.mdpi.com/2078-2489/14/12/655
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Repository Contents
 
-### `npm test`
+1. **Code:** Contains the source code for the CAD system implementation.
+2. **Documentation:** Includes detailed documentation on system architecture, usage instructions, and dataset information.
+3. **Data:** Contains the TBX11K dataset used for training and evaluation.
+4. **Results:** Includes evaluation metrics, graphs, and visualizations showcasing the performance of the CAD system.
+5. **References:** Lists relevant research papers, articles, and resources.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Clone repository
+ - git clone https://github.com/AyurEye/AyurEye.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### npm install 
+ - npm install 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### RunServer 
+ - npm start 
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Result
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After conducting our comprehensive experiments with image weights assignment, minority class augmentation, and evolving the hyperparameter, we achieved promising results for our TB detection model. The AP for the obsolete pulmonary TB class reached 0.499, while the AP for the active TB class achieved a value of 0.675. As a result, the mAP at an IoU threshold of 0.5 amounted to 0.587, as illustrated.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Precision–recall curve for the model](https://www.mdpi.com/information/information-14-00655/article_deploy/html/images/information-14-00655-g014.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Screenshots
+![Screenshots](media/screenshot.png)
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please review the license terms before using or reproducing any part of this project.
 
-### Code Splitting
+---
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any inquiries or feedback, please contact [anurag.timilsina@gmail.com]
